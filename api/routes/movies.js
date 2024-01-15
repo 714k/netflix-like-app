@@ -100,7 +100,6 @@ router.get("/random", verify, async(req, res) => {
 
 // GET ALL
 router.get("/", verify, async(req, res) => {
-  console.log(req);
   try {
     const movies = await Movie.find().sort({title: 1});
     res.status(200).json(movies);  
